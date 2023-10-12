@@ -1,0 +1,207 @@
+{
+	"info": {
+		"_postman_id": "b297515e-e96b-4243-bc25-83351ad6cf8d",
+		"name": "TaskManagement APP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Rajat\",\r\n    \"email\":\"rajat02@gmail.com\",\r\n    \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/user/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \r\n    \"email\":\"rajat02@gmail.com\",\r\n    \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addTask",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhamF0MDJAZ21haWwuY29tIiwidXNlcklkIjoiNjUyN2MxMTRjMDEyMWI0NjdmMDhiYzhjIiwiaWF0IjoxNjk3MTE4ODYxfQ.SnQpXtc-U9GYCp5WU4J1bdCcI9nhOtqh9SyidKl-3Lc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"taskName\": \"fsgvdfd\",\r\n    \"taskDescription\": \"sfvgsfvisdbvijsdbhvcds\",\r\n    \"priority\": \"high\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/task/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"task",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "viewTask",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhamF0MDJAZ21haWwuY29tIiwidXNlcklkIjoiNjUyN2MxMTRjMDEyMWI0NjdmMDhiYzhjIiwiaWF0IjoxNjk3MTE1MTA5fQ.X7UzJddNKPFiyzd-Peui_fLg8KROLK3UFpctJr83LNQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/task/view",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"task",
+						"view"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateTask",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhamF0MDJAZ21haWwuY29tIiwidXNlcklkIjoiNjUyN2MxMTRjMDEyMWI0NjdmMDhiYzhjIiwiaWF0IjoxNjk3MTE1MTA5fQ.X7UzJddNKPFiyzd-Peui_fLg8KROLK3UFpctJr83LNQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"taskName\": \"fsgvdfd\",\r\n    \"taskDescription\": \"sfvgsfvisdbvijsdbhvcdsrgfrgfdgfdgdg455555555545\",\r\n    \"priority\": \"high\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/task/update/6527f2cd54151fcdbfb17e53",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"task",
+						"update",
+						"6527f2cd54151fcdbfb17e53"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteTask",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhamF0MDJAZ21haWwuY29tIiwidXNlcklkIjoiNjUyN2MxMTRjMDEyMWI0NjdmMDhiYzhjIiwiaWF0IjoxNjk3MTE1MTA5fQ.X7UzJddNKPFiyzd-Peui_fLg8KROLK3UFpctJr83LNQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/task/delete/6527f2cd54151fcdbfb17e53",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"task",
+						"delete",
+						"6527f2cd54151fcdbfb17e53"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
